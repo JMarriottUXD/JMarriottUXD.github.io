@@ -258,9 +258,22 @@ html.w-mod-touch * {
   display: block;
 }
 
-.w-inline-block {
+.w-inline-feature-block {
   max-width: 100%;
   display: inline-block;
+   border-bottom-style: solid;
+   border-color: #d6d6d6;
+   padding-bottom: 16px;
+   border-width: 2px;
+}
+
+.w-inline-other-block {
+  max-width: 100%;
+  display: inline-block;
+   border-bottom-style: solid;
+   border-color: #d6d6d6;
+   padding-bottom: 12px;
+   border-width: 0.5px;
 }
 
 .w-clearfix:before, .w-clearfix:after {
@@ -409,7 +422,8 @@ h2 {
 }
 
 h3 {
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 24px;
   font-size: 24px;
   line-height: 30px;
 }
@@ -2151,6 +2165,14 @@ strong {
   margin-bottom: 3rem;
 }
 
+.heading-small-home {
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.75rem;  
+   }
+
 .body {
   font-size: 18px;
   font-style: normal;
@@ -2294,13 +2316,22 @@ strong {
   font-family: Lato, sans-serif;
 }
 
-.article-list-dec {
+.article-list-featured-dec {
   color: var(--light-grey);
   margin-bottom: 0;
   font-family: Lato, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.5rem;
+}
+
+.article-list-other-dec {
+  color: var(--light-grey);
+  margin-bottom: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
 }
 
 .bold-text {
@@ -2318,7 +2349,7 @@ strong {
   margin-bottom: 32px;
 }
 
-.article-list-title {
+.article-list-featured-title {
   color: #fff;
   margin-bottom: 4px;
   font-family: Lato, sans-serif;
@@ -2326,7 +2357,23 @@ strong {
   line-height: 2.5rem;
 }
 
-.article-list-date {
+.article-list-featured-title:hover {
+    text-decoration: underline;
+}
+
+.article-list-other-title {
+  color: #fff;
+  margin-bottom: 4px;
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.article-list-other-title:hover {
+    text-decoration: underline;
+}
+
+.article-list-featured-date {
   color: var(--light-grey);
   margin-bottom: 0;
   font-family: Lato, sans-serif;
@@ -2336,19 +2383,44 @@ strong {
   text-decoration: none;
 }
 
-.article-list-item-link {
+.article-list-other-date {
+  color: var(--light-grey);
+  margin-bottom: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  text-decoration: none;
+}
+
+.article-list-featured-item-link {
   float: none;
   clear: none;
   min-width: 100%;
-  margin-bottom: 52px;
+  margin-bottom: 72px;
   font-weight: 700;
   text-decoration: none;
   position: relative;
 }
 
-.article-list-item-link:hover {
+.article-list-featured-item-link:hover {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.article-list-other-item-link {
+  float: none;
+  clear: none;
+  min-width: 100%;
+  margin-bottom: 48px;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.article-list-other-item-link:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .image {
@@ -2771,6 +2843,17 @@ strong {
   font-family: lato, sans-serif;
   font-size: 1.4rem;
   line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.paragraph-5-a {
+  color: var(--light-grey);
+  font-family: lato, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: #fff 0.04em solid;
 }
 
 .div-block-6 {
@@ -2882,10 +2965,25 @@ strong {
     font-weight: 400;
   }
 
-  .article-list-date {
-    color: var(--light-grey);
-    font-weight: 300;
-  }
+  .article-list-featured-date {
+  color: var(--light-grey);
+  margin-bottom: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
+.article-list-other-date {
+  color: var(--light-grey);
+  margin-bottom: 0;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  text-decoration: none;
+}
 
   .div-block {
     float: none;
@@ -2958,12 +3056,17 @@ strong {
     font-size: 1.8rem;
     line-height: 2rem;
   }
+    
+  .article-list-featured-date {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
 
-  .article-list-date {
-    font-size: .9rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-  }
+  .article-list-other-date {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+    
 
   .div-block {
     margin-top: 1rem;
@@ -3077,7 +3180,12 @@ strong {
     padding-right: 1rem;
   }
 
-  .heading-large-home {
+   .heading-small-home {
+      font-size: 20px;
+      line-height: 24px;
+   }
+   
+   .heading-large-home {
     font-size: 2.8rem;
     line-height: 3.5rem;
   }
@@ -3126,13 +3234,32 @@ strong {
     line-height: 32px;
   }
 
-  .article-list-title {
+  .article-list-featured-title {
     font-size: 1.5rem;
+    line-height: 2rem;
   }
+    
+   .article-list-other-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+    
+  .article-list-featured-item-link {
+  margin-bottom: 64px;
+}
 
+  .article-list-other-item-link {
+  margin-bottom: 40px;
+}
+    
   .article-list-item-link {
     font-size: 14rem;
   }
+    
+  .block-quote-2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
 
   .text-cta {
     object-fit: fill;
